@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Wallpaper1" translatesAutoresizingMaskIntoConstraints="NO" id="zD8-hF-nZm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Wallpaper1" highlightedImage="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="zD8-hF-nZm">
                                 <rect key="frame" x="0.0" y="44" width="414" height="831"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice4" translatesAutoresizingMaskIntoConstraints="NO" id="LEa-No-ef7">
@@ -48,7 +48,7 @@
                                 <rect key="frame" x="113.5" y="542" width="187" height="49"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="187" id="2c4-Cr-yLG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="2c4-Cr-yLG"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="MON-gu-u8w"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="hhQ-Yc-Tgx"/>
                                     <constraint firstAttribute="height" constant="49" id="kij-fZ-nz5"/>
@@ -57,6 +57,9 @@
                                 <state key="normal" title="Ramdom Dice">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ramDiceBttom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QL-dF-K5v"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Dice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="34" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-VE-2Jx">
                                 <rect key="frame" x="157" y="308" width="100" height="30"/>
@@ -106,6 +109,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstDiceimageView" destination="LEa-No-ef7" id="ACI-Br-T0Z"/>
+                        <outlet property="ramdomDiceBttom" destination="i95-CE-Ncc" id="2IY-9d-heP"/>
+                        <outlet property="seconDicimagoView" destination="Jpf-T7-191" id="G9n-RI-MJn"/>
+                        <outlet property="thirdDiceimageView" destination="P4A-td-9eL" id="KVZ-xW-zDJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,6 +122,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dice1" width="42.5" height="42.5"/>
         <image name="Dice2" width="42.5" height="42.5"/>
         <image name="Dice3" width="42.5" height="42.5"/>
         <image name="Dice4" width="42.5" height="42.5"/>
